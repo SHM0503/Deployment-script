@@ -15,3 +15,13 @@ service jenkins start
 cat /var/lib/jenkins/secrets/initialAdminPassword
 #chmod 777 jenkins.sh
 #./jenkins.sh
+#install docker 
+sudo apt update -y
+sudo apt install docker.io -y
+service docker start
+sudo usermod -aG docker jenkins
+sudo chmod 777 /var/run/docker.sock
+#Install Ansible
+
+
+
